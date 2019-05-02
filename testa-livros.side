@@ -1,0 +1,488 @@
+{
+  "id": "1b58baaf-a02d-4b30-bb7b-ba48df2f9cde",
+  "version": "2.0",
+  "name": "Dani",
+  "url": "https://www.submarino.com.br",
+  "tests": [{
+    "id": "5868a00b-b964-4174-bcc8-69e3ac6dbd18",
+    "name": "Teste 1",
+    "commands": [{
+      "id": "3cfc28cc-fb8b-49ea-b231-286cbd12fb6e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c729b58-5985-4991-87b2-cb4944d0e31f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "800x877",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e755a954-2802-41dd-ba6a-966a5fd1026b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mmn-link",
+      "targets": [
+        ["css=.mmn-link", "css:finder"],
+        ["xpath=//nav[@id='h_menu']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.submarino.com.br/mapa-do-site')]", "xpath:href"],
+        ["xpath=//nav/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d1d2689-197d-441c-b119-d3b3054d44c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Livros",
+      "targets": [
+        ["css=.szr-3 > .sz-3 > .itm-lnk-level-1", "css:finder"],
+        ["xpath=//nav[@id='h_menu']/div/div/div/div/div/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.submarino.com.br/categoria/livros?chave=prf_hm_mn_bn_0_1_livros')]", "xpath:href"],
+        ["xpath=//div/div/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "816abd8b-955e-4407-9fea-5f323892e1c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Toda a loja de Livros",
+      "targets": [
+        ["linkText=Toda a loja de Livros", "linkText"],
+        ["css=.mmn-box-wpr > .mmn-panel:nth-child(2) .mmn-item:nth-child(4) > .mmn-panel > .mmn-list > .mmn-item > .mmn-all", "css:finder"],
+        ["xpath=(//a[contains(text(),'Toda a loja de Livros')])[2]", "xpath:link"],
+        ["xpath=//nav[@id='h_menu']/div/div/div/div/div/ul/li[4]/div/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.submarino.com.br/categoria/livros?chave=prf_hm_mn_bn_0_1_livros')])[2]", "xpath:href"],
+        ["xpath=//div/div/ul/li[4]/div/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc87a662-fb0b-4e49-a6d5-aa77f87fa70e",
+      "comment": "",
+      "command": "click",
+      "target": "partialLinkText=Livro -",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78bf89bd-f30e-4f60-b8c1-3ea5955be141",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table//tbody//*[contains(text(), 'Autor')]//..//..//td[2]//span",
+      "targets": [],
+      "value": "autor"
+    }, {
+      "id": "07c2cbce-8a64-4151-ab9a-115d4fc7a0a7",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table//tbody//*[contains(text(), 'ISBN')]//..//..//td[2]//span",
+      "targets": [],
+      "value": "isbn"
+    }, {
+      "id": "8b0cad11-0a7c-48e6-9c7f-7bda8cac5ac8",
+      "comment": "",
+      "command": "open",
+      "target": "http://www.amazon.com.br",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a6d5db4-1eda-40fe-a48b-bce0db584e75",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-search']/form/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "${isbn}"
+    }, {
+      "id": "7d3e1220-0779-4862-a348-6866fa4531ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-search-submit > .nav-input",
+      "targets": [
+        ["css=.nav-search-submit > .nav-input", "css:finder"],
+        ["xpath=//input[@value='Ir']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-search']/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ba42ee1-86e7-4d83-968b-abd34fafd5a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-image",
+      "targets": [
+        ["css=.s-image", "css:finder"],
+        ["xpath=//img[@alt='O milagre da manhã']", "xpath:img"],
+        ["xpath=//div[@id='search']/div/div[2]/div/span[3]/div/div/div/div/div/div[2]/div/div/div/span/a/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6a5559a-60a1-439b-83f5-1e66d812703e",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//*[contains(@class, 'author')]//a",
+      "targets": [],
+      "value": "${autor}"
+    }]
+  }, {
+    "id": "6ba1c79c-2a51-4a26-8f9b-f69262b12894",
+    "name": "Teste 3",
+    "commands": [{
+      "id": "bd316c4b-cfea-4bbd-a509-d0ea6f6ad5a6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a99ec8e8-ab20-4e95-a12b-41330c3a7a8a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "800x877",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9d2ff3a-de36-4234-9df0-92d7205af3c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mmn-link",
+      "targets": [
+        ["css=.mmn-link", "css:finder"],
+        ["xpath=//nav[@id='h_menu']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.submarino.com.br/mapa-do-site')]", "xpath:href"],
+        ["xpath=//nav/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9d705ae-10f5-4418-8b14-be0c5172dda6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Livros",
+      "targets": [
+        ["css=.szr-3 > .sz-3 > .itm-lnk-level-1", "css:finder"],
+        ["xpath=//nav[@id='h_menu']/div/div/div/div/div/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.submarino.com.br/categoria/livros?chave=prf_hm_mn_bn_0_1_livros')]", "xpath:href"],
+        ["xpath=//div/div/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fd7bf2a-ebee-420e-a9b1-8c4b14455635",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Toda a loja de Livros",
+      "targets": [
+        ["linkText=Toda a loja de Livros", "linkText"],
+        ["css=.mmn-box-wpr > .mmn-panel:nth-child(2) .mmn-item:nth-child(4) > .mmn-panel > .mmn-list > .mmn-item > .mmn-all", "css:finder"],
+        ["xpath=(//a[contains(text(),'Toda a loja de Livros')])[2]", "xpath:link"],
+        ["xpath=//nav[@id='h_menu']/div/div/div/div/div/ul/li[4]/div/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.submarino.com.br/categoria/livros?chave=prf_hm_mn_bn_0_1_livros')])[2]", "xpath:href"],
+        ["xpath=//div/div/ul/li[4]/div/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32b47e84-0750-4bfd-b07b-fbe821a42fa2",
+      "comment": "",
+      "command": "click",
+      "target": "partialLinkText=Livro -",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "944dc6e1-a110-4632-849e-cce2493327d4",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table//tbody//*[contains(text(), 'Autor')]//..//..//td[2]//span",
+      "targets": [],
+      "value": "autor"
+    }, {
+      "id": "1c6ce73f-67d6-4184-a9dc-ec1960ab76c6",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table//tbody//*[contains(text(), 'ISBN')]//..//..//td[2]//span",
+      "targets": [],
+      "value": "isbn"
+    }, {
+      "id": "e72aa586-e6a8-47d7-b3bf-52b8680fab1a",
+      "comment": "",
+      "command": "open",
+      "target": "http://www.amazon.com.br",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d340820-c341-4984-8071-5145efdbdfe8",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-search']/form/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "${isbn}"
+    }, {
+      "id": "babef8a0-aaa4-4a30-ab95-41ab06eed00b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-search-submit > .nav-input",
+      "targets": [
+        ["css=.nav-search-submit > .nav-input", "css:finder"],
+        ["xpath=//input[@value='Ir']", "xpath:attributes"],
+        ["xpath=//div[@id='nav-search']/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b77812d-043c-4240-8628-26d13d1af868",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s-image",
+      "targets": [
+        ["css=.s-image", "css:finder"],
+        ["xpath=//img[@alt='O milagre da manhã']", "xpath:img"],
+        ["xpath=//div[@id='search']/div/div[2]/div/span[3]/div/div/div/div/div/div[2]/div/div/div/span/a/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ddff40e-2217-4bd6-9d40-0d1a407e6fc8",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//*[contains(@class, 'author')]//a",
+      "targets": [],
+      "value": "${autor}"
+    }, {
+      "id": "af142932-9e25-4521-b50f-bff93b00559e",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.livrariacultura.com.br",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "866a4092-3ba4-45b9-995d-f2f9a7169cc8",
+      "comment": "",
+      "command": "click",
+      "target": "id=Ntt-responsive-mobile",
+      "targets": [
+        ["id=Ntt-responsive-mobile", "id"],
+        ["name=Ntt", "name"],
+        ["css=#Ntt-responsive-mobile", "css:finder"],
+        ["xpath=//input[@id='Ntt-responsive-mobile']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c127ed2d-22a4-4d55-882a-99a20178c733",
+      "comment": "",
+      "command": "type",
+      "target": "id=Ntt-responsive-mobile",
+      "targets": [
+        ["id=Ntt-responsive-mobile", "id"],
+        ["name=Ntt", "name"],
+        ["css=#Ntt-responsive-mobile", "css:finder"],
+        ["xpath=//input[@id='Ntt-responsive-mobile']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${isbn}"
+    }, {
+      "id": "b0ed8309-174f-492d-9e56-69627e7e5fbc",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=Ntt-responsive-mobile",
+      "targets": [
+        ["id=Ntt-responsive-mobile", "id"],
+        ["name=Ntt", "name"],
+        ["css=#Ntt-responsive-mobile", "css:finder"],
+        ["xpath=//input[@id='Ntt-responsive-mobile']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "ff535571-9860-4338-9129-cdeef4a51a41",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-ev-content .main-prod-img-ev .main-prod-img-ev",
+      "targets": [
+        ["css=.product-ev-content .main-prod-img-ev .main-prod-img-ev", "css:finder"],
+        ["xpath=//img[@alt='Livro - O MILAGRE DA MANHÃ']", "xpath:img"],
+        ["xpath=//section[@id='results']/div/div/div/div/div[2]/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72f520c7-720d-4421-a8d7-a494e71b020f",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//*[contains(text(), 'Autor:')]//..//a",
+      "targets": [],
+      "value": "${autor}"
+    }]
+  }, {
+    "id": "0118bbe9-80f6-4521-aae6-3d55ff75a809",
+    "name": "Teste 2",
+    "commands": [{
+      "id": "455cef9a-8f33-4852-8a42-4f957bc4bb98",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ce62883-d0ee-4f6a-864c-097fd3f65601",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "800x877",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1c265dc-20c7-48d4-9d7c-b695037c5b17",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mmn-link",
+      "targets": [
+        ["css=.mmn-link", "css:finder"],
+        ["xpath=//nav[@id='h_menu']/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.submarino.com.br/mapa-do-site')]", "xpath:href"],
+        ["xpath=//nav/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fc4e713-5ddf-4768-aec6-dd692fcdde6d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Livros",
+      "targets": [
+        ["css=.szr-3 > .sz-3 > .itm-lnk-level-1", "css:finder"],
+        ["xpath=//nav[@id='h_menu']/div/div/div/div/div/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.submarino.com.br/categoria/livros?chave=prf_hm_mn_bn_0_1_livros')]", "xpath:href"],
+        ["xpath=//div/div/ul/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d3256a3-b2f8-4daf-8ec6-59621e2151f7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Toda a loja de Livros",
+      "targets": [
+        ["linkText=Toda a loja de Livros", "linkText"],
+        ["css=.mmn-box-wpr > .mmn-panel:nth-child(2) .mmn-item:nth-child(4) > .mmn-panel > .mmn-list > .mmn-item > .mmn-all", "css:finder"],
+        ["xpath=(//a[contains(text(),'Toda a loja de Livros')])[2]", "xpath:link"],
+        ["xpath=//nav[@id='h_menu']/div/div/div/div/div/ul/li[4]/div/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.submarino.com.br/categoria/livros?chave=prf_hm_mn_bn_0_1_livros')])[2]", "xpath:href"],
+        ["xpath=//div/div/ul/li[4]/div/ul/li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "385d2e2a-1f6d-42d5-b2fd-7a1991b43073",
+      "comment": "",
+      "command": "click",
+      "target": "partialLinkText=Livro -",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54529470-f7b9-4ba6-9c52-7be341ff1831",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table//tbody//*[contains(text(), 'Autor')]//..//..//td[2]//span",
+      "targets": [],
+      "value": "autor"
+    }, {
+      "id": "b98c5d6f-b206-4242-9224-6aa5da9106c4",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//table//tbody//*[contains(text(), 'ISBN')]//..//..//td[2]//span",
+      "targets": [],
+      "value": "isbn"
+    }, {
+      "id": "d9e7ff49-1fb2-4cfe-9856-76bb9c26d1ec",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.livrariacultura.com.br",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18891390-15f2-4512-95de-9921ebd67837",
+      "comment": "",
+      "command": "click",
+      "target": "id=Ntt-responsive-mobile",
+      "targets": [
+        ["id=Ntt-responsive-mobile", "id"],
+        ["name=Ntt", "name"],
+        ["css=#Ntt-responsive-mobile", "css:finder"],
+        ["xpath=//input[@id='Ntt-responsive-mobile']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ae6515c-c6b9-444a-a647-000642a913ae",
+      "comment": "",
+      "command": "type",
+      "target": "id=Ntt-responsive-mobile",
+      "targets": [
+        ["id=Ntt-responsive-mobile", "id"],
+        ["name=Ntt", "name"],
+        ["css=#Ntt-responsive-mobile", "css:finder"],
+        ["xpath=//input[@id='Ntt-responsive-mobile']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${isbn}"
+    }, {
+      "id": "4eda72e4-425a-415b-96a5-18eec884c4ec",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=Ntt-responsive-mobile",
+      "targets": [
+        ["id=Ntt-responsive-mobile", "id"],
+        ["name=Ntt", "name"],
+        ["css=#Ntt-responsive-mobile", "css:finder"],
+        ["xpath=//input[@id='Ntt-responsive-mobile']", "xpath:attributes"],
+        ["xpath=//form[@id='searchForm']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "2806548e-c325-4764-a519-3dd68e84e364",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-ev-content .main-prod-img-ev .main-prod-img-ev",
+      "targets": [
+        ["css=.product-ev-content .main-prod-img-ev .main-prod-img-ev", "css:finder"],
+        ["xpath=//img[@alt='Livro - O MILAGRE DA MANHÃ']", "xpath:img"],
+        ["xpath=//section[@id='results']/div/div/div/div/div[2]/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22f56ff8-b4bd-4179-ac6f-bca57bd74164",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//*[contains(text(), 'Autor:')]//..//a",
+      "targets": [],
+      "value": "${autor}"
+    }]
+  }],
+  "suites": [{
+    "id": "960c0155-adac-42be-8378-98f12ec1e33a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5868a00b-b964-4174-bcc8-69e3ac6dbd18"]
+  }],
+  "urls": ["https://www.submarino.com.br/"],
+  "plugins": []
+}
